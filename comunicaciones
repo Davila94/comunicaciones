@@ -1,0 +1,80 @@
+graph TB
+
+subgraph Inicio
+A[Inicio del Proyecto]
+end
+
+subgraph Desarrollo
+A1[Tareas de Desarrollo]
+A2[Tareas de Diseño]
+end
+
+subgraph Comunicación Interna
+B1[Reuniones de Equipo]
+B2[Correo Electrónico]
+B3[Chat Interno]
+end
+
+subgraph Lanzamiento
+C1[Preparación del Lanzamiento]
+C2[Lanzamiento de Funcionalidades]
+end
+
+subgraph Comunicación Externa
+D1[Redes Sociales]
+D2[Aplicación Móvil]
+D3[Sitio Web]
+end
+
+subgraph Usuarios Finales
+E1[Usuarios Finales]
+end
+
+subgraph Inversionistas y Financiadores
+F1[Inversionistas]
+end
+
+subgraph Reguladores
+G1[Reguladores]
+end
+
+subgraph Proveedores de Servicios
+H1[Proveedores de Servicios]
+end
+
+subgraph Medios de Comunicación
+I1[Medios de Comunicación]
+end
+
+A -->|Información de Desarrollo| A1
+A -->|Diseño| A2
+
+A1 -->|Actualizaciones| B1
+A2 -->|Feedback| B1
+
+B1 -->|Decisiones| A1
+B1 -->|Informes| F1
+B1 -->|Información del Lanzamiento| C1
+
+C1 -->|Aprobación| B1
+C1 -->|Preparativos| C2
+
+C2 -->|Información del Lanzamiento| D1
+C2 -->|Información del Lanzamiento| D2
+C2 -->|Información del Lanzamiento| D3
+C2 -->|Información del Lanzamiento| I1
+
+D1 -->|Anuncios| E1
+D2 -->|Instrucciones| E1
+D3 -->|Actualizaciones| E1
+
+E1 -->|Feedback| B1
+
+F1 -->|Informes| B1
+
+G1 -->|Requisitos| B1
+
+H1 -->|Integración| B1
+
+I1 -->|Cobertura| E1
+
